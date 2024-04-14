@@ -308,220 +308,214 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-  .edit-btn {
-    width: 38px;
-  }
+.edit-btn {
+  width: 38px;
+}
 
-  .fixed-icon {
-    position: fixed;
-  }
+.fixed-icon {
+  position: fixed;
+}
 
-  .select-fix-icon:not(.fixed-icon) {
-    position: absolute;
-  }
+.select-fix-icon:not(.fixed-icon) {
+  position: absolute;
+}
 
-  .fixed-icon-last {
-    position: absolute;
-    bottom: 0;
-  }
+.fixed-icon-last {
+  position: absolute;
+  bottom: 0;
+}
 
-  .select-fix-icon i {
-    color: $primary;
-  }
+.select-fix-icon i {
+  color: $primary;
+}
 
-  .underline {
-    text-decoration: underline;
-  }
-
-  .top-row {
-    display: flex;
-    padding-top: 25px;
-
-    .ceter-name {
-
-      h1 {
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 39px;
-        color: #000000;
-      }
+.underline {
+  text-decoration: underline;
+}
+.top-row {
+  display: flex;
+  padding-top: 25px;
+  .ceter-name {
+    margin-right: auto;
+    h1 {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 39px;
+      color: #000000;
     }
   }
+}
 
-  .table {
-    border-radius: 20px;
-    outline-style: solid;
-    outline-color: $primary;
+.table {
+  border-radius: 20px;
+  outline-style: solid;
+  outline-color: $primary;
+  margin-top: 16px;
+  display: flex;
+  padding: 5px 16px 16px 16px;
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+  }
+  .left-table {
+    margin-right: 48px;
     display: flex;
-    padding: 5px 16px 16px 16px;
-
+    .values p {
+      height: 21px;
+    }
+    @media (max-width: 767.98px) {
+    }
     @media (max-width: 575.98px) {
-      flex-direction: column;
+      margin-right: 0px;
     }
-
-    .left-table {
-      display: flex;
-
-      .values p {
-        height: 21px;
-      }
-
-      .names {
-      }
-
-      p {
-        overflow-x: hidden; // Add this to prevent overflow
-        text-overflow: ellipsis; // Add this to truncate text
-        white-space: nowrap; // Add this to prevent wrapping
-      }
-    }
-
-    .right-table {
-      display: flex;
-
-      .names {
-      }
-
-      p {
-        overflow-x: hidden; // Add this to prevent overflow
-        text-overflow: ellipsis; // Add this to truncate text
-        white-space: nowrap; // Add this to prevent wrapping
-      }
-    }
-  }
-
-  .generations-table {
-    gap: 0px;
-
-    tr {
-      gap: 0px;
-    }
-
-    .double {
-      background-color: #c21d1d;
-    }
-
-    .cat-cell {
-      position: relative;
-      border: 2px solid #bebebe;
-      height: 100%;
-      border-radius: 12px;
-      background-color: white;
-      text-align: center;
-      overflow:hidden;
-
-      .smaller-text {
-        font-size: 10px;
-      }
-    }
-
-    .tree-item {
-      height: 100%;
-      display: inline-block;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-
-      p {
-        margin: 0px;
-      }
-
-      i {
-        color: $primary;
-      }
-
-      div:nth-child(2) {
-        text-align: center;
-      }
-
-      div:first-child,
-      div:last-child {
-        width: 100%;
-      }
-    }
-  }
-
-  .generations-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-left: 16px;
-
-    @media (max-width: 575.98px) {
-      align-items: center;
-    }
-
-    .align-select {
-      display: flex;
-      align-items: center;
-
-      .q-field--item-aligned {
-
-        :deep(.q-icon) {
-          margin-top: 13px;
-        }
-      }
-    }
-
-    :deep(.q-field--standard .q-field__control:before) {
-      border-bottom: none;
+    .names {
+      margin-right: 16px;
     }
 
     p {
-      margin: 0;
-      margin-top: 15px;
-    }
-
-    .q-select-size {
-      width: 35px;
+      margin: 15px 0 0;
     }
   }
+  .values p {
+    height: 21px;
+  }
+  .right-table {
+    display: flex;
+    @media (max-width: 767.98px) {
+      margin-left: 4px;
+    }
+    @media (max-width: 575.98px) {
+      margin-left: 0;
+    }
+    .names {
+      margin-right: 16px;
+    }
 
-  .table-placeholder {
-    background-color: #f5f5f5;
+    p {
+      margin: 15px 0 0;
+    }
+  }
+}
 
-    .generations-table {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f5f5f5;
+.generations-table {
+  gap: 0px;
+  tr {
+    gap: 0px;
+  }
+  .double {
+    background-color: #c21d1d;
+  }
 
-      tr {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: #f5f5f5;
+  .cat-cell {
+    position: relative;
+    border: 2px solid #bebebe;
+    height: 100%;
+    border-radius: 12px;
+    background-color: white;
+    text-align: center;
+    .smaller-text {
+      font-size: 10px;
+    }
+  }
+  .tree-item {
+    height: 100%;
+    #display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 
-        td {
-        }
+    p {
+      margin: 0px;
+    }
+
+    i {
+      color: $primary;
+    }
+
+    div:nth-child(2) {
+      text-align: center;
+    }
+
+    div:first-child,
+    div:last-child {
+      width: 100%;
+    }
+  }
+}
+.generations-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 16px;
+
+  @media (max-width: 575.98px) {
+    align-items: center;
+    padding-left: 16px;
+  }
+  .align-select {
+    display: flex;
+    align-items: center;
+    .q-field--item-aligned {
+      padding: 0;
+      padding-left: 5px;
+      :deep(.q-icon) {
+        margin-top: 13px;
       }
     }
   }
-
-  .woman,
-  .man {
-    cursor: pointer;
-    text-decoration: underline;
-
-    &.woman {
-      color: #ff7e7e;
-    }
-
-    &.man {
-      color: #0000ee;
-    }
+  :deep(.q-field--standard .q-field__control:before) {
+    border-bottom: none;
   }
 
-  .container-info-icon {
-    margin-left: 16px;
+  p {
+    margin: 0;
+    margin-top: 15px;
   }
+  .q-select-size {
+    width: 35px;
+  }
+}
 
-  .correctness-container {
+.table-placeholder {
+  background-color: #f5f5f5;
+  .generations-table {
     display: flex;
     justify-content: center;
-    font-size: 1.15em;
+    align-items: center;
+    background-color: #f5f5f5;
+    tr {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: #f5f5f5;
+      td {
+        padding: 2px;
+      }
+    }
   }
+}
+.woman {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #ff7e7e;
+}
+.man {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0000ee;
+}
+
+.container-info-icon {
+  margin-left: 16px;
+}
+
+.correctness-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  font-size: 1.15em;
+}
 </style>

@@ -778,151 +778,142 @@ export default defineComponent({
 
 <style scoped lang="scss">
 h4 {
-  margin-top: 0;
-  margin-bottom: 1rem; /* Using rem for flexibility */
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
-
 .my-card {
-  width: 100%; /* Adjusted for responsiveness */
-  max-width: 50rem; /* Using rem for flexibility */
+  width: 700px;
 }
 
 .edit-btn {
-  width: 3.8rem; /* Using rem for flexibility */
+  width: 38px;
 }
-
-/* Panels */
 .panels {
   background-color: $secondary;
-}
 
-.panels .q-tab-panel {
-  @media (max-width: 575.98px) {
-    padding: 0;
+  .q-tab-panel {
+    @media (max-width: 575.98px) {
+      padding: 0px;
+    }
   }
 }
-
-/* Background */
 .background {
-  padding: 1.5rem; /* Using rem for flexibility */
-  max-width: 90rem; /* Using rem for flexibility */
+  padding: 24px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-
   @media (max-width: 575.98px) {
-    padding: 0;
+    padding: 0px;
   }
 
-  /* Underline */
   .underline {
     text-decoration: underline;
   }
-
-  /* Top Row */
   .top-row {
     display: flex;
-    padding-top: 1rem; /* Using rem for flexibility */
-
+    padding-top: 16px;
     @media (max-width: 575.98px) {
       flex-direction: column;
-      padding: 1rem;
-      padding-bottom: 0;
+      padding: 16px;
+      padding-bottom: 0px;
     }
-
     .buttons {
       @media (max-width: 575.98px) {
-        margin-bottom: 1rem; /* Using rem for flexibility */
+        margin-bottom: 16px;
       }
     }
-
     .ceter-name {
       margin-right: auto;
-      margin-left: 0.5rem; /* Using rem for flexibility */
-
+      margin-left: 8px;
       @media (max-width: 575.98px) {
-        margin: 0;
+        margin: 0px;
       }
     }
   }
 
-  /* Table */
   .table {
-    margin-top: 1rem; /* Using rem for flexibility */
-    padding: 1rem 1.5rem; /* Using rem for flexibility */
-
-    @media (max-width: 575.98px) {
-      outline-style: none;
-      margin-top: 0;
-      padding-top: 0;
+    .col-md-8 {
+      label {
+        width: 48% !important;
+        @media (max-width: 1024px) {
+          width: 30% !important;
+        }
+      }
     }
-
     .field {
       display: flex;
       align-items: center;
-      height: 2.188rem; /* Using rem for flexibility */
-
+      height: 35px;
       label {
         width: 35%;
+        @media (max-width: 1024px) {
+          width: 30% !important;
+        }
       }
 
       p {
         margin: 0;
       }
     }
+    margin-top: 16px;
+    padding: 10px 16px 10px 16px;
 
-    .col-md-8 label {
-      width: 48%;
-
-      @media (max-width: 1024px) {
-        width: 30%;
-      }
+    @media (max-width: 575.98px) {
+      outline-style: none;
+      margin-top: 0px;
+      padding-top: 0px;
     }
-
-    .left-table, .right-table {
+    .left-table {
+      margin-right: 48px;
       display: flex;
-      margin-right: 3rem; /* Using rem for flexibility */
-
-      @media (max-width: 575.98px) {
-        margin-right: 0;
-      }
-
       .values p {
-        height: 1.3125rem; /* Using rem for flexibility */
+        height: 21px;
       }
-
+      @media (max-width: 575.98px) {
+        margin-right: 0px;
+      }
       .names {
-        margin-right: 1rem; /* Using rem for flexibility */
+        margin-right: 16px;
       }
 
       p {
-        margin: 0.9375rem 0 0; /* Using rem for flexibility */
+        margin: 15px 0 0;
       }
     }
-
     .values p {
-      height: 1.3125rem; /* Using rem for flexibility */
+      height: 21px;
     }
-
     .right-table {
+      display: flex;
       @media (max-width: 767.98px) {
-        margin-left: 0.25rem; /* Using rem for flexibility */
+        margin-left: 4px;
       }
-
       @media (max-width: 575.98px) {
         margin-left: 0;
       }
+      .names {
+        margin-right: 16px;
+      }
+
+      p {
+        margin: 15px 0 0;
+      }
     }
   }
 
-  /* Q Tabs */
   .q-tabs {
-    margin-top: 1rem; /* Using rem for flexibility */
+    margin-top: 16px;
+  }
+  .q-tab-panel {
+    padding: 0px;
+    background: #f5f5f5 !important;
+  }
+  .q-panel {
+    background: #f5f5f5 !important;
   }
 
-  /* Q Panels */
-  .q-tab-panel, .q-panel, .q-tab-panels {
+  .q-tab-panels {
     background: #f5f5f5 !important;
-    padding: 0 !important;
   }
 }
 </style>
