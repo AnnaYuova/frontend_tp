@@ -87,6 +87,35 @@ class StatsService {
         return Promise.reject(error);
       });
   }
+
+  async getLogsByCron(cronName: string): Promise<{ logs: any }> {
+    return api
+      .get('logs/get/cron/' + cronName)
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error: AxiosError) => {
+        if (error.response?.status === 401) {
+          return null;
+        }
+
+        return Promise.reject(error);
+      });
+  }
+  async getLogsByEvent(event: string): Promise<{ logs: any }> {
+    return api
+      .get('logs/get/event/' + event)
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error: AxiosError) => {
+        if (error.response?.status === 401) {
+          return null;
+        }
+
+        return Promise.reject(error);
+      });
+  }
 }
 
 export default new StatsService();
